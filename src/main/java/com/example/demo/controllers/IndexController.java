@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.models.userModel;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @RequestMapping("/app") //ruta base
@@ -47,4 +49,15 @@ public class IndexController {
         
         return "listar";
     }
+
+    @GetMapping("/persona")
+    public String param(@RequestParam String nombre, @RequestParam String apellido, @RequestParam String email, Model model) {
+        userModel persona = new userModel();
+        persona.setNombre(nombre);
+        persona.setApellido(apellido);
+        persona.setEmail(email);
+        model.addAttribute("persona", persona);
+        return "persona";
+    }
+    
 }

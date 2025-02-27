@@ -7,6 +7,13 @@
 </head>
 <body>
     <h1 th:text="${titulo}"></h1>
-    
+    <ul>
+        <li>
+            <a th:href="@{/params/string(texto='hola1')}">redireccionar al metodo string</a>
+        </li>
+        <li>
+            <a th:href="@{/params/mix-params(saludo='hola', numero=2)}">redireccionar al metodo mix-params</a>
+        </li>
+    </ul>
 </body>
 </html>

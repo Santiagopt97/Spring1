@@ -15,7 +15,7 @@ public class EjemploParamsController {
         return "Params/index";
     }
 
-    @GetMapping("/string") //http://localhost:8081/params/string?texto=hola asi se ve un ejemplo
+    @GetMapping("/string") //http://localhost:8081/param/string?texto=hola asi se ve un ejemplo
     public String param(@RequestParam String texto, Model model) {
         model.addAttribute("titulo", "Recibir parametros del request HTTP GET - URL");
         model.addAttribute("resultado", "El texto enviado es: " + texto);
