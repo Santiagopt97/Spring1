@@ -6,6 +6,17 @@ public class userModel {
     private String apellido;
     private String email;
 
+    // Constructor
+    public userModel(String nombre, String apellido, String email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+    }
+
+    // Constructor
+    public userModel() {
+    }
+
     public String getNombre() {
         return nombre;
     }
